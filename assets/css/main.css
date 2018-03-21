@@ -3411,7 +3411,7 @@
 			opacity: 1;
 			padding: 0.35em 1em;
 			position: relative;
-			z-index: 1;
+			z-index: 100;
 		}
 
 			#banner h2:before, #banner h2:after {
@@ -3463,6 +3463,7 @@
 			min-width: 100%;
 			min-height: 100%;
 			overflow: hidden;
+			z-index: -1
 		}
 
 		#banner .more {
@@ -3649,6 +3650,10 @@
 
 	#main > header {
 		padding: 12em 0 10em 0 ;
+		background-position: center center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		text-align: center;
 		background-image: -moz-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
 		background-image: -webkit-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
 		background-image: -ms-linear-gradient(top, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url("../../images/banner.jpg");
@@ -3670,6 +3675,7 @@
 			letter-spacing: 0.225em;
 			text-transform: uppercase;
 			top: 0;
+			z-index: 100;
 		}
 
 			#main > header p a {
@@ -3831,4 +3837,18 @@
 
 	body.is-mobile.landing #footer {
 		background-color: #1d242a;
+	}
+
+	/* Video Background */
+	video-background{
+		position: fixed;
+  		right: 0; 
+  		bottom: 0;
+  		min-width: 100%; 
+ 		min-height: 100%;
+ 	 	width: auto; 
+  		height: auto;
+ 		z-index: -100;
+ 		filter: brightness(55%);
+
 	}
